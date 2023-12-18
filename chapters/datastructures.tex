@@ -97,7 +97,7 @@
 	- Ein Stack kann durch ein Array oder eine verkettete Liste implementiert werden\\
 	- Die Elemente werden auf dem Stack oben hinzugefügt und entfernt\\
 	- Schnelle Hinzufüge- und Entfernungsoperationen (konstante Laufzeit O(1))\\
-	- Keine Suchmöglichkeit, ggf. aber Möglichkeit oberstes Element anzuschauen (peek)
+	- Keine Suchmöglichkeit, ggf. aber Möglichkeit oberstes Element anzuschauen (peek)\\
 	- Custom Suche implementierbar, dann O(n) wahrscheinlich\\\\
 	\textbf{Laufzeitkomplexität}\\
 	\begin{table}[ht]
@@ -107,6 +107,36 @@
 			Operation & Push & Pop  \\
 			\midrule
 			Time Complexity & $O(1)$ & $O(1)$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
+	
+	\subsection{Queue}
+	Agiert nach \textbf{F}irst-\textbf{I}n-\textbf{F}irst-\textbf{O}ut (\textbf{FIFO}) Prinzip: Das letzte hinzugefügte Element wird als Erstes entfernt.
+	Unterstützt lediglich Hinzufügen (Enqueue) und Entfernen (Dequeue)
+	\\\\
+	\textbf{Anwendungsfälle:}\\
+	- Warteschlangen in Betriebssystemen für Prozessplanung\\
+	- Puffer (Bspw. Datenverarbeitung)\\
+	- Aufgabenwarteschlangen (Bspw. in Multi-Thread-Anwendungen)\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/Queue.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- Eine Queue kann bspw. durch ein Array oder eine verkettete Liste implementiert werden\
+	- Die Elemente werden auf der einen Seite (Rückseite) hinzugefügt und auf der anderen Seite (Vorderseite) entfernt\\
+	- Schnelle Hinzufüge- und Entfernungsoperationen (konstante Laufzeit O(1))\\
+	- \textbf{Spezialfall}: Double Ended Queue ermöglicht Operationen an beiden Seiten\\
+	- \textbf{Spezialfall}: Priority Queue, wo Elemente nach Priorität in die Queue eingefügt werden (Über Comparator Interface umzusetzen)\\\\
+	\textbf{Laufzeitkomplexität (Anhand LinkedList-basierter Queue)}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{5}{c}}
+			\toprule
+			Operation & Offer & Peak & Poll & Remove & Size  \\
+			\midrule
+			Time Complexity & $O(1)$ & $O(1)$ & $O(1)$ & $O(1)$ & $O(1)$\\
 			\bottomrule
 		\end{tabular}
 	\end{table}
