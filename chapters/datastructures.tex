@@ -32,7 +32,19 @@
 		\\
 		\textbf{Funktionalität unter der Haube:}\\
 		- Intern durch Array verwaltet, welches ggf. neu dimensioniert werden muss\\
-		- Neudimensionierung führt zu O(n), da neues Array und alle Elemente kopiert werden\\
+		- Neudimensionierung führt zu O(n), da neues Array und alle Elemente kopiert werden. Wird allerdings selten gemacht und dann i.d.R. direkt verdoppelt, somit on average konstant (O(n))\\\\
+		\textbf{Laufzeitkomplexität}\\
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{l *{6}{c}}
+				\toprule
+				Operation & Add & Remove & Get & Contains & Next & Size \\
+				\midrule
+				Time Complexity & $O(1)$ & $O(n)$ & $O(1)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:arraylist-complexities}
+		\end{table}
 		\clearpage
 		
 		\subsection{Titel}
@@ -46,7 +58,9 @@
 		\\
 		\textbf{Funktionalität unter der Haube:}\\
 		- Punkt 1\\
-		- Punkt 2\\
+		- Punkt 2\\\\
+		
+		
 		\clearpage
 
 \end{document}
