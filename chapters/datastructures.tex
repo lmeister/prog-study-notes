@@ -42,7 +42,7 @@
 		\\
 		\textbf{Funktionalität unter der Haube:}\\
 		- Intern durch Array verwaltet, welches ggf. neu dimensioniert werden muss\\
-		- Neudimensionierung führt zu O(n), da neues Array und alle Elemente kopiert werden. Wird allerdings selten gemacht und dann i.d.R. direkt verdoppelt, somit on average konstant (O(1))\\\\
+		- Neudimensionierung führt zu O(n), da neues Array und alle Elemente kopiert werden. Wird allerdings selten gemacht und dann i.d.R. direkt verdoppelt, somit amortisiert O(1)\\\\
 		\textbf{Laufzeitkomplexität}\\
 		\begin{table}[ht]
 			\centering
@@ -83,6 +83,33 @@
 	\clearpage
 		
 		
-		\clearpage
+	\subsection{Stack}
+	Agiert nach \textbf{L}ast-\textbf{I}n-\textbf{F}irst-\textbf{O}ut (\textbf{LIFO}) Prinzip: Das letzte hinzugefügte Element wird als Erstes entfernt.
+	Unterstützt lediglich Hinzufügen (Push) und Entfernen (Pop). \\\\
+	\textbf{Anwendungsfälle:}\\
+	- Rückverfolgung von Funktionsaufrufen (Call Stack Aufbau bspw.)\\
+	- Umkehrung von Zeichenketten/Ausdrücken\\
+	- Undo-Mechanismen\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/Stack.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- Ein Stack kann durch ein Array oder eine verkettete Liste implementiert werden\\
+	- Die Elemente werden auf dem Stack oben hinzugefügt und entfernt\\
+	- Schnelle Hinzufüge- und Entfernungsoperationen (konstante Laufzeit O(1))\\
+	- Keine Suchmöglichkeit, ggf. aber Möglichkeit oberstes Element anzuschauen (peek)
+	- Custom Suche implementierbar, dann O(n) wahrscheinlich\\\\
+	\textbf{Laufzeitkomplexität}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{2}{c}}
+			\toprule
+			Operation & Push & Pop  \\
+			\midrule
+			Time Complexity & $O(1)$ & $O(1)$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
 
 \end{document}

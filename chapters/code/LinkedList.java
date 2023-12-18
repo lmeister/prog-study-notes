@@ -4,7 +4,7 @@ import java.util.LinkedList;
 // Deklaration und Initialisierung (singly LinkedList)
 LinkedList<Integer> myLinkedList = new LinkedList<>();
 
-// Elemente hinzufügen
+// Elemente hinzufuegen
 myLinkedList.add(1);
 
 // Zugriff auf ein Element
