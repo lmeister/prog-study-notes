@@ -4,20 +4,30 @@
 \begin{document}
 	
 	\section{Datenstrukturen}
-%	   TEMPLATE
-%		\subsection{Titel}
-%		- GENERAL INFORMATION -\\\\
+%		TEMPLATE
+%		\subsection{ArrayList}
+%		GENERELLE INFO. \\\\
 %		\textbf{Anwendungsfälle:}\\
-%		- Punkt 1\\
-%		- Punkt 2\\
-%		\\
+%		- TEXT\\
+%		- TEXT\\\\
 %		\textbf{Syntax:}
-%		\lstinputlisting[language=Java,caption=Example.java]{Example.java} 
+%		\lstinputlisting[language=Java]{code/ArrayList.java} 
 %		\\
 %		\textbf{Funktionalität unter der Haube:}\\
-%		- Punkt 1\\
-%		- Punkt 2\\
-%		\clearpage
+%		- TEXT\\
+%		- TEXT\\\\
+%		\textbf{Laufzeitkomplexität}\\
+%		\begin{table}[ht]
+%			\centering
+%			\begin{tabular}{l *{6}{c}}
+%				\toprule
+%				Operation & Add & Remove & Get & Contains & Next & Size \\
+%				\midrule
+%				Time Complexity & $O(1)$ & $O(n)$ & $O(1)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+%				\bottomrule
+%			\end{tabular}
+%		\end{table}
+%		\clearpage		
 	
 		\subsection{ArrayList}
 		Die ArrayList in Java ist eine dynamisch wachsende Liste, die auf dem zugrunde liegenden Array basiert.
@@ -43,22 +53,34 @@
 				Time Complexity & $O(1)$ & $O(n)$ & $O(1)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
 				\bottomrule
 			\end{tabular}
-			\label{tab:arraylist-complexities}
 		\end{table}
 		\clearpage
 		
-		\subsection{Titel}
-		- GENERAL INFORMATION -\\\\
+		
+		\subsection{LinkedList}
+		Dynamische Datenstruktur bestehend aus Knoten, die jeweils auf den nächsten Knoten in der Sequenz zeigen
+		Zwei Haupttypen: Singly Linked (Zeigt nur auf Nachfolger), Doubly Linked (Zeigt  auf Vor- und Nachfolger).\\\\
 		\textbf{Anwendungsfälle:}\\
-		- Punkt 1\\
-		- Punkt 2\\
-		\\
+		- Bei häufigen Einfüge- und Löschoperationen an verschiedenen Positionen\\
+		- Wenn die Größe der Liste variabel ist\\\\
 		\textbf{Syntax:}
-		\lstinputlisting[language=Java,caption=Example.java]{Example.java} 
+		\lstinputlisting[language=Java]{code/ArrayList.java} 
 		\\
 		\textbf{Funktionalität unter der Haube:}\\
-		- Punkt 1\\
-		- Punkt 2\\\\
+		- Jeder Knoten erhält Verweise auf Nach- (ggf. Vorgänger)\\
+		- Einfügen und Löschen an am Ende/Anfang konstant, ansonsten linear, da update der Verweise\\\\
+		\textbf{Laufzeitkomplexität}\\
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{l *{6}{c}}
+				\toprule
+				Operation & Add & Remove & Get & Contains & Next & Size \\
+				\midrule
+				Time Complexity & $O(1)$ & $O(1)$ & $O(n)$ & $O(n)$ & $O(1)$ & $O(1)$ \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+	\clearpage
 		
 		
 		\clearpage
