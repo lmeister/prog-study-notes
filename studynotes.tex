@@ -1,0 +1,38 @@
+% main.tex
+\documentclass{article}
+\usepackage{subfiles}
+\usepackage{xcolor}
+\usepackage{listings} % for code listings
+\usepackage{hyperref} % for hyperlinked table of contents
+
+\definecolor{background}{rgb}{0.95,0.95,0.95}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstset{
+	language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\color{codegreen},
+	stringstyle=\color{red},
+	frame=single,
+	breaklines=true,
+	showstringspaces=false,
+	numbers=left,
+	numberstyle=\tiny\color{codegray},
+	backgroundcolor=\color{backcolour},
+	captionpos=b,
+}
+
+
+\begin{document}
+	
+	\tableofcontents
+	\clearpage
+	\subfile{chapters/datastructures}
+	% Add more chapter files as needed
+	
+\end{document}
