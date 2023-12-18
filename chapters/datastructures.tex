@@ -19,6 +19,22 @@
 %		- Punkt 2\\
 %		\clearpage
 	
+		\subsection{ArrayList}
+		Die ArrayList in Java ist eine dynamisch wachsende Liste, die auf dem zugrunde liegenden Array basiert.
+		Sie erweitert die Funktionalität von Arrays durch automatische Größenanpassung und bietet eine flexible Möglichkeit, Elemente hinzuzufügen, zu löschen und darauf zuzugreifen. \\\\
+		\textbf{Anwendungsfälle:}\\
+		- Speicherung von Elementen einer Liste\\
+		- Zugriff auf Elemente durch Index\\
+		- Wenn die Größe der Liste nicht im Voraus bekannt ist\\ 
+		- Wenn häufiger Einfüge- und Löschoperationen erforderlich sind\\\\
+		\textbf{Syntax:}
+		\lstinputlisting[language=Java,caption=ArrayList.java]{code/ArrayList.java} 
+		\\
+		\textbf{Funktionalität unter der Haube:}\\
+		- Intern durch Array verwaltet, welches ggf. neu dimensioniert werden muss\\
+		- Neudimensionierung führt zu O(n), da neues Array und alle Elemente kopiert werden\\
+		\clearpage
+		
 		\subsection{Titel}
 		- GENERAL INFORMATION -\\\\
 		\textbf{Anwendungsfälle:}\\
