@@ -124,7 +124,7 @@
 	\lstinputlisting[language=Java]{code/Queue.java} 
 	\\
 	\textbf{Funktionalität unter der Haube:}\\
-	- Eine Queue kann bspw. durch ein Array oder eine verkettete Liste implementiert werden\
+	- Eine Queue kann bspw. durch ein Array oder eine verkettete Liste implementiert werden\\
 	- Die Elemente werden auf der einen Seite (Rückseite) hinzugefügt und auf der anderen Seite (Vorderseite) entfernt\\
 	- Schnelle Hinzufüge- und Entfernungsoperationen (konstante Laufzeit O(1))\\
 	- \textbf{Spezialfall}: Double Ended Queue ermöglicht Operationen an beiden Seiten\\
@@ -141,5 +141,136 @@
 		\end{tabular}
 	\end{table}
 	\clearpage
+	
+	\subsection{HashMap}
+	Assoziative Datenstruktur, speichert Key-Value Paare
+	Erlaubt extrem schnelles Suchen, Einfügen und Löschen durch Hash-Verfahren\\\\
+	\textbf{Anwendungsfälle:}\\
+	- Effiziente Suche nach Werten in großen Datenmengen\\
+	- Implementierung von Caches\\
+	- Verfolgung von Zählungen oder Häufigkeiten\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/HashMap.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- Implementiert häufig eine Hashtabelle, die Schlüssel in Indizes umwandelt, um Werte zu speichern und abzurufen\\
+	- Verwendet Hashfunktionen, um Kollisionen zu minimieren und den Zugriff auf die Werte zu beschleunigen\\
+	- Schnelle Einfüge-, Lösch- und Suchoperationen (konstante Laufzeit O(1)), aber bei Kollisionen (Zwei versch. Elemente, gleicher Hash) kann die Leistung abnehmen\\\\
+	\textbf{Laufzeitkomplexität}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{3}{c}}
+			\toprule
+			Operation & Get & ContainsKey & Next\\
+			\midrule
+			Time Complexity & $O(1)$ & $O(1)$ & $O(h / n)$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
+	
+	\subsection{Set}
+	Ungeordnete Sammlung eindeutiger Elemente, somit keine Duplikate erlaubt\\\\
+	\textbf{Anwendungsfälle:}\\
+	- Überprüfen auf Eindeutigkeit von Elementen\\
+	- Durchlaufen und Verarbeiten von eindeutigen Elementen\\
+	- Mengenoperationen wie Vereinigung, Schnittmenge und Differenz\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/HashMap.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- Implementiert häufig eine Hashtabelle oder andere effiziente Mechanismen zur Überprüfung auf Eindeutigkeit\\
+	- Verwendet Hashfunktionen, um schnelles Hinzufügen, Löschen und Überprüfen auf Eindeutigkeit zu ermöglichen\\
+	- Schnelle Operationen für Mengenoperationen\\\\
+	\textbf{Laufzeitkomplexität (Hash Table based)}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{5}{c}}
+			\toprule
+			Operation & Add & Remove & Contains & Next & Size\\
+			\midrule
+			Time Complexity & $O(1)$ & $O(1)$ & $O(1)$ & $O(h / n)$ & $O(1)$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
+	
+	\subsection{Tree}
+	Hierarchische Datenstruktur bestehend aus Knoten, die durch Kanten verbunden sind
+	Verschiedene Arten von Bäumen: Suchbäume, AVL-Bäum, Heaps,..\\\\
+	\textbf{Anwendungsfälle:}\\
+	- Organisation von Daten in hierarchischen Strukturen\\
+	- Schnelle Suche, Einfügung und Löschung von Elemente\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/Tree.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- \textbf{Einfügen (Hinzufügen):}\\
+	\quad - Abhängig von der Art des Baumes, erfolgt das Hinzufügen von Elementen durch Traversieren und Einfügen an der richtigen Stelle.\\
+	\quad - Bei binären Suchbäumen wird das Element entsprechend der Ordnungsregel eingefügt.\\
+	\quad - Bei AVL-Bäumen erfolgt zusätzlich eine Balance-Anpassung, um die Höhe des Baumes zu minimieren und somit die Suche zu optimieren.\\\\
+	- \textbf{Löschen (Entfernen):}\\
+	\quad - Entfernen eines Elements erfordert ebenfalls eine Traversierung, um das Element zu finden.\\
+	\quad - Je nach Art des Baumes müssen nach dem Entfernen gegebenenfalls Anpassungen vorgenommen werden, um die Baumstruktur beizubehalten.\\
+	\quad - AVL-Bäume werden nach dem Löschen ebenfalls balanciert.\\\\
+	- \textbf{Suchen (nach einem Element):}\\
+	\quad - Suche erfolgt durch Traversieren des Baumes entsprechend der Ordnungsregel.\\
+	\quad - Bei einem binären Suchbaum wird die Suche abhängig von der Vergleichsregel im Baum durchgeführt\\\\
+	- \textbf{Durchlaufen aller Elemente:}\\
+	\quad - Die Traversierung kann in-order, pre-order oder post-order erfolgen, je nach Anforderungen.\\
+	\quad - \textit{In-order}: Linker Teilbaum, aktueller Knoten, rechter Teilbaum.\\
+	\quad - \textit{Pre-order}: Aktueller Knoten, linker Teilbaum, rechter Teilbaum.\\
+	\quad - \textit{Post-order}: Linker Teilbaum, rechter Teilbaum, aktueller Knoten.\\\\
+	- \textbf{Spezialfall Min-Heap:}\\
+	\quad - Das kleinste Element befindet sich an der Wurzel\\
+	\quad - Jeder Elternknoten ist kleiner als oder gleich seinen Kindern\\
+	\quad - Verwendung in der Implementierung von Prioritätswarteschlangen, wo das Element mit der höchsten Priorität (niedrigster Wert) immer an der Spitze steht\\\\
+	- \textbf{Spezialfall Max-Heap:}\\
+	\quad - Das größte Element befindet sich an der Wurzel\\
+	\quad - Jeder Elternknoten ist größer als oder gleich seinen Kindern\\
+	\quad - Auch in der Implementierung von Prioritätswarteschlangen verwendet, jedoch mit der höchsten Priorität an der Spitze\\\\
+	- \textbf{Spezialfall AVL-Baum:}\\
+	\quad - Ein ausbalancierter binärer Suchbaum, der sicherstellt, dass die Höhen der beiden Kindunterbäume jedes Knotens höchstens um eins voneinander abweichen\\
+	\quad - Die Balance wird durch Rotationen (links oder rechts) bei Einfüge- oder Löschoperationen aufrechterhalten\\
+	\quad - Die Balancierung sorgt für effiziente Suchoperationen, da die Höhe des Baumes minimiert wird\\\\
+	
+	\textbf{Laufzeitkomplexität}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{3}{c}}
+			\toprule
+			Operation & TODO & TODO & TODO\\
+			\midrule
+			Time Complexity & $TODO$ & $TODO$ & $TODO$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
+	
+	\subsection{Graph}
+	Sammlung von Knoten (Vertices) und Kanten (Edges), welche Knoten verbinden.
+	Kann gerichtet (Directed) oder ungerichtet (undirected sein)\\\\
+	\textbf{Anwendungsfälle:}\\
+	- Modellierung von Beziehungen in sozialen Netzwerken\\
+	- Routing-Algorithmen in Computernetzwerken\\
+	- Suche in Graphen, wie in der Tiefen- oder Breitensuche\\\\
+	\textbf{Syntax:}
+	\lstinputlisting[language=Java]{code/Graph.java} 
+	\\
+	\textbf{Funktionalität unter der Haube:}\\
+	- Stark variierend je nach Umsetzung\\\
+	\textbf{Laufzeitkomplexität}\\
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{l *{3}{c}}
+			\toprule
+			Operation & TODO & TODO & TODO \\
+			\midrule
+			Time Complexity & $TODO$ & $TODO$ & $TODO$\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	\clearpage
+
 
 \end{document}

@@ -4,7 +4,7 @@ import java.util.HashMap;
 // Deklaration und Initialisierung
 HashMap<String, Integer> myHashMap = new HashMap<>();
 
-// Werte hinzufügen
+// Werte hinzufuegen
 myHashMap.put("One", 1);
 
 // Wert abrufen

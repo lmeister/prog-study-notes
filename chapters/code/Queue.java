@@ -5,7 +5,7 @@ import java.util.Queue;
 // Deklaration und Initialisierung
 Queue<Integer> myQueue = new LinkedList<>();
 
-// Elemente hinzufügen
+// Elemente hinzufuegen
 myQueue.offer(1);
 
 // Element entfernen
