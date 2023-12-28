@@ -27,10 +27,11 @@
 
 	\subsection{Suchalgorithmen}
 	\subsubsection{Lineare Suche}
-	GENERELLE INFO. \\\\
+	Die lineare Suche (Auch sequentielle Suche) ist ein Suchalgorithmnus, der ein Element innerhalb einer Liste finden soll.
+	Dabei wird sequenziell jedes Element der Liste durchsucht, bis das gesuchte Element gefunden wurde.\\\\
 	\textbf{Anwendungsfälle:}\\
-		- TEXT\\
-		- TEXT\\\\
+		- Wenn Liste relativ klein ($\leq100$)\\
+		- Wenn Liste unsortiert\\\\
 	\textbf{Implementation:}\\
 	\lstinputlisting[language=Java]{code/LineareSuche.java} 
 	\textbf{Laufzeitkomplexität}\\
@@ -40,19 +41,20 @@
 			\toprule
 			Operation & Best & Average & Worst\\
 			\midrule
-			Time Complexity & $O(1)$ & $O(n)$ & $O(1)$\\
+			Time Complexity & $O(1)$ & $O(n)$ & $O(n)$\\
 			\bottomrule
 		\end{tabular}
 	\end{table}
 	\clearpage
 	
 	\subsubsection{Binäre Suche}
-	GENERELLE INFO. \\\\
-	\textbf{Anwendungsfälle:}\\
-	- TEXT\\
-	- TEXT\\\\
+	Die binäre Suche ist ein Suchalgorithmus, der eine sortierte Liste voraussetzt.
+	Das Prinzip der binären Suche ist, dass der Suchbereich immer weiter eingeschränkt wird (Effektiv halbiert). 
+	Dazu wird der Median (mittlere Wert) des Suchbereichs genommen. 
+	Ist dieser Median Größer als der gesuchte Wert, so wird die kleinere Hälfte des Suchbereichs als neuen Suchbereich festgelegt.
+	Analog wird bei größerem Median die größere Hälfte verwendet.\\\\
 	\textbf{Implementation:}\\
-	\lstinputlisting[language=Java]{code/LineareSuche.java} 
+	\lstinputlisting[language=Java]{code/BinaereSuche.java} 
 	\textbf{Laufzeitkomplexität}\\
 	\begin{table}[ht]
 		\centering
@@ -60,7 +62,7 @@
 			\toprule
 			Operation & Best & Average & Worst\\
 			\midrule
-			Time Complexity & $O(1)$ & $O(n)$ & $O(1)$\\
+			Time Complexity & $O(1)$ & $O(log(n))$ & $O(log(n))$\\
 			\bottomrule
 		\end{tabular}
 	\end{table}
